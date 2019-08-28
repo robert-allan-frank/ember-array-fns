@@ -30,7 +30,7 @@ Usage
 * [`array-splice`](#array-splice)
 
 #### `array-concat`
-Perform concat of two or more arrays. See [Array.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) for details on the Array.concat function.
+Perform concatenation of two or more arrays. See [Array.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) for details on the Array.concat function.
 
 
 ```hbs
@@ -58,7 +58,7 @@ Perform find of array by function. See [Array.find()](https://developer.mozilla.
 {{array-find array fn}}
 ```
 
-#### `array-findIndex`
+#### `array-find-index`
 Perform find of array by function returning the index of the found element. See [Array.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) for details on the Array.findIndex function.
 
 ```hbs
@@ -100,7 +100,7 @@ Join an array by a string delimiter. See [Array.join()](https://developer.mozill
 {{array-join array '-'}}
 ```
 
-#### `array-lastIndexOf`
+#### `array-last-index-of`
 Locate last index of element in array. See [Array.lastIndexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) for details on the Array.lastIndexOf function.
 
 ```hbs
