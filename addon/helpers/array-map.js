@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform map of array by function.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayMap
+ * @param {Object[]} array The array.
  * @param {Function} fn The comparison function.
  * @returns {Object[]} The new array of mapped elements.
  */
