@@ -1,10 +1,10 @@
 import { helper } from '@ember/component/helper';
 
 /**
- * Perform concat of two or more arrays.
+ * Perform concatenation of two or more arrays.
  *
  * @public
- * @param {Object[]} The array.
+ * @param {...Object[]} The arrays.
  * @returns {Object[]} The concatenated array.
  */
 export function arrayConcat([...arrays]) {
