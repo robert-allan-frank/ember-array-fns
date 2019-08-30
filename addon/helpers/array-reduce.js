@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform reduce of array by function.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayReduce
+ * @param {Object[]} array The array.
  * @param {Function} fn The comparison function.
  * @param {Object} accumulator The accumlator.
  * @returns {Object} The reduced object.

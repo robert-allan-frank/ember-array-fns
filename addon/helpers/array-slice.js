@@ -4,9 +4,10 @@ import { helper } from '@ember/component/helper';
  * Perform slice of array.
  *
  * @public
- * @param {Object[]} The array.
- * @param {number} The beginning index.
- * @param {number} The optional end index.
+ * @function arraySlice
+ * @param {Object[]} array The array.
+ * @param {number} beginIndex The beginning index.
+ * @param {number} endIndex The optional end index.
  * @returns {Object[]} The sliced array.
  */
 export function arraySlice([array, beginIndex, endIndex]) {

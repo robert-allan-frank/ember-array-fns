@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform find of array by function.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayFind
+ * @param {Object[]} array The array.
  * @param {Function} fn The comparison function.
  * @returns {Object} The found element else undefined.
  */
