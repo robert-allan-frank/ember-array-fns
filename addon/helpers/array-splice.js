@@ -4,10 +4,11 @@ import { helper } from '@ember/component/helper';
  * Perform splice of array.
  *
  * @public
- * @param {Object[]} The array.
- * @param {number} The beginning index.
- * @param {number} The delete count.
- * @param {Object[]} The optional elements
+ * @function arraySplice
+ * @param {Object[]} array The array.
+ * @param {number} beginIndex The beginning index.
+ * @param {number} deleteCount The delete count.
+ * @param {...Object} elements The optional elements
  * @returns {Object[]} The spliced array.
  */
 export function arraySplice([array, beginIndex, deleteCount, ...elements]) {

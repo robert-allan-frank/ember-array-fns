@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform reverse of array.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayReverse
+ * @param {Object[]} array The array.
  * @returns {Object[]} The reversed array.
  */
 export function arrayReverse([array]) {

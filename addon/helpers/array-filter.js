@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform filter of array by function.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayFilter
+ * @param {Object[]} array The array.
  * @param {Function} fn The comparison function.
  * @returns {Object[]} The filtered array.
  */

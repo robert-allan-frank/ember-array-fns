@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Perform sort of array by function.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arraySort
+ * @param {Object[]} array The array.
  * @param {Function} fn The comparison function.
  * @returns {Object[]} The sorted array
  */

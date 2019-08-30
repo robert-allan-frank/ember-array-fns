@@ -4,7 +4,8 @@ import { helper } from '@ember/component/helper';
  * Locate first index of element in array.
  *
  * @public
- * @param {Object[]} The array.
+ * @function arrayIndexOf
+ * @param {Object[]} array The array.
  * @param {string} element The element to locate.
  * @returns {number} Zero based index of first item if found else -1.
  */
