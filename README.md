@@ -1,5 +1,7 @@
 ember-array-fns
+[![npm version](https://badge.fury.io/js/ember-array-fns.svg)](https://badge.fury.io/js/ember-array-fns)
 [![Build Status](https://travis-ci.com/robert-allan-frank/ember-array-fns.svg?branch=develop)](https://travis-ci.com/robert-allan-frank/ember-array-fns)
+[![codecov](https://codecov.io/gh/robert-allan-frank/ember-array-fns/branch/develop/graph/badge.svg)](https://codecov.io/gh/robert-allan-frank/ember-array-fns)
 ==============================================================================
 This addon provides array helpers for Ember templates and components.
 
