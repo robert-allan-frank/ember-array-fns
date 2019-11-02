@@ -159,6 +159,13 @@ Perform splice of array. See [Array.splice()](https://developer.mozilla.org/en-U
 {{array-splice array 1 0 'February'}}
 ```
 
+Related Addons
+------------------------------------------------------------------------------
+* See [ember-intl-fns](https://github.com/robert-allan-frank/ember-intl-fns) for internationalization based helpers.
+* See [ember-math-fns](https://github.com/robert-allan-frank/ember-math-fns) for math based helpers.
+* See [ember-number-fns](https://github.com/robert-allan-frank/ember-number-fns) for number based helpers.
+* See [ember-string-fns](https://github.com/robert-allan-frank/ember-string-fns) for string based helpers.
+
 Compatibility
 ------------------------------------------------------------------------------
 * Ember.js v3.4 or above
