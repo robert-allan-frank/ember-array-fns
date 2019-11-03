@@ -161,6 +161,7 @@ Perform splice of array. See [Array.splice()](https://developer.mozilla.org/en-U
 
 Related Addons
 ------------------------------------------------------------------------------
+* See [ember-datetime-fns](https://github.com/robert-allan-frank/ember-datetime-fns) for date and time based helpers.
 * See [ember-intl-fns](https://github.com/robert-allan-frank/ember-intl-fns) for internationalization based helpers.
 * See [ember-math-fns](https://github.com/robert-allan-frank/ember-math-fns) for math based helpers.
 * See [ember-number-fns](https://github.com/robert-allan-frank/ember-number-fns) for number based helpers.
