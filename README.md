@@ -82,6 +82,13 @@ Locate first index of element in array. See [Array.indexOf()](https://developer.
 {{array-index-of array 'a'}}
 ```
 
+#### `array-is-array`
+Determine if value is an array. See [isArray()](http://api.emberjs.com/ember/3.12/functions/@ember%2Farray/isArray) for details on the isArray function.
+
+```hbs
+{{array-is-array array}}
+```
+
 #### `array-is-first-element`
 Returns true if element is first within the array.
 
