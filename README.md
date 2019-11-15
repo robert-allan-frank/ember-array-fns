@@ -82,6 +82,13 @@ Locate first index of element in array. See [Array.indexOf()](https://developer.
 {{array-index-of array 'a'}}
 ```
 
+#### `array-is-array`
+Determine if value is an array. See [isArray()](http://api.emberjs.com/ember/3.12/functions/@ember%2Farray/isArray) for details on the isArray function.
+
+```hbs
+{{array-is-array array}}
+```
+
 #### `array-is-first-element`
 Returns true if element is first within the array.
 
@@ -158,6 +165,14 @@ Perform splice of array. See [Array.splice()](https://developer.mozilla.org/en-U
 ```hbs
 {{array-splice array 1 0 'February'}}
 ```
+
+Related Addons
+------------------------------------------------------------------------------
+* See [ember-datetime-fns](https://github.com/robert-allan-frank/ember-datetime-fns) for date and time based helpers.
+* See [ember-intl-fns](https://github.com/robert-allan-frank/ember-intl-fns) for internationalization based helpers.
+* See [ember-math-fns](https://github.com/robert-allan-frank/ember-math-fns) for math based helpers.
+* See [ember-number-fns](https://github.com/robert-allan-frank/ember-number-fns) for number based helpers.
+* See [ember-string-fns](https://github.com/robert-allan-frank/ember-string-fns) for string based helpers.
 
 Compatibility
 ------------------------------------------------------------------------------
