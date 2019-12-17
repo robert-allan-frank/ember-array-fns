@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {boolean} True if all matches are found.
  */
 export function arrayEvery([array, fn]) {
-  return array.every(fn);
+  if (Array.isArray(array)) {
+    return array.every(fn);
+  }
+
+  return false;
 }
 
 export default helper(arrayEvery);

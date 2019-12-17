@@ -21,4 +21,12 @@ module('Integration | Helper | array-slice', function(hooks) {
     await render(hbs`{{array-slice array 2 4}}`);
     assert.equal(this.element.textContent.trim(), '3,4');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray = 'a';
+    this.set('array', nonArray);
+
+    await render(hbs`{{array-slice array 2 4}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

@@ -25,4 +25,14 @@ module('Integration | Helper | array-every', function(hooks) {
     await render(hbs`{{array-every array fn}}`);
     assert.equal(this.element.textContent.trim(), 'false');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const fn = item => item === 'a';
+    const nonArray = 'a';
+    this.set('array', nonArray);
+    this.set('fn', fn);
+
+    await render(hbs`{{array-every array fn}}`);
+    assert.equal(this.element.textContent.trim(), 'false');
+  });
 });

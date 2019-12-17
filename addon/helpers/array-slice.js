@@ -13,10 +13,14 @@ import { helper } from '@ember/component/helper';
 export function arraySlice([array, beginIndex, endIndex]) {
   let result;
 
-  if (endIndex === undefined) {
-    result = array.slice(beginIndex);
+  if (Array.isArray(array)) {
+    if (endIndex === undefined) {
+      result = array.slice(beginIndex);
+    } else {
+      result = array.slice(beginIndex, endIndex);
+    }
   } else {
-    result = array.slice(beginIndex, endIndex);
+    result = [];
   }
 
   return result;

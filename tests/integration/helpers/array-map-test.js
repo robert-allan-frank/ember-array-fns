@@ -36,4 +36,14 @@ module('Integration | Helper | array-map', function(hooks) {
     await render(hbs`{{array-map array fn}}`);
     assert.equal(this.element.textContent.trim(), 'a,b,c,d,e');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const fn = item => item.value;
+    const nonArray = 'a';
+    this.set('array', nonArray);
+    this.set('fn', fn);
+
+    await render(hbs`{{array-map array fn}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

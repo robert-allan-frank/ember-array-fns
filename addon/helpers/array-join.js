@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {string} The joined string.
  */
 export function arrayJoin([array, delimiter]) {
-  return array.join(delimiter);
+  if (Array.isArray(array)) {
+    return array.join(delimiter);
+  }
+
+  return '';
 }
 
 export default helper(arrayJoin);

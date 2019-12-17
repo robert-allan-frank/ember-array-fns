@@ -13,4 +13,12 @@ module('Integration | Helper | array-reverse', function(hooks) {
     await render(hbs`{{array-reverse array}}`);
     assert.equal(this.element.textContent.trim(), '5,4,3,2,1');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray = 'a';
+    this.set('array', nonArray);
+
+    await render(hbs`{{array-reverse array}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

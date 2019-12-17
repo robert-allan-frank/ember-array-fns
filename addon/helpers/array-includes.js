@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {boolean} True if element is found in array.
  */
 export function arrayIncludes([array, element]) {
-  return array.includes(element);
+  if (Array.isArray(array)) {
+    return array.includes(element);
+  }
+
+  return false;
 }
 
 export default helper(arrayIncludes);
