@@ -11,7 +11,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object} The reduced object.
  */
 export function arrayReduce([array, fn, accumulator]) {
-  return array.reduce(fn, accumulator);
+  if (Array.isArray(array)) {
+    return array.reduce(fn, accumulator);
+  }
+
+  return [];
 }
 
 export default helper(arrayReduce);

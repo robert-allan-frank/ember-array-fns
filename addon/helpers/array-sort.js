@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object[]} The sorted array
  */
 export function arraySort([array, fn]) {
-  return array.sort(fn);
+  if (Array.isArray(array)) {
+    return array.sort(fn);
+  }
+
+  return [];
 }
 
 export default helper(arraySort);

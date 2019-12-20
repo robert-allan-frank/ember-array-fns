@@ -12,15 +12,21 @@ import { helper } from '@ember/component/helper';
  * @returns {Object[]} The spliced array.
  */
 export function arraySplice([array, beginIndex, deleteCount, ...elements]) {
-  if (deleteCount === undefined) {
-    array.splice(deleteCount);
-  } else if (elements.length === 0) {
-    array.splice(beginIndex, deleteCount);
+  let result;
+
+  if (Array.isArray(array)) {
+    if (deleteCount === undefined) {
+      result = array.splice(deleteCount);
+    } else if (elements.length === 0) {
+      result = array.splice(beginIndex, deleteCount);
+    } else {
+      result = array.splice(beginIndex, deleteCount, ...elements);
+    }
   } else {
-    array.splice(beginIndex, deleteCount, ...elements);
+    result = [];
   }
 
-  return array;
+  return result;
 }
 
 export default helper(arraySplice);

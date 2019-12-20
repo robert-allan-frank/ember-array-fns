@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {number} Zero based index of last item if found else -1.
  */
 export function arrayLastIndexOf([array, element]) {
-  return array.lastIndexOf(element);
+  if (Array.isArray(array)) {
+    return array.lastIndexOf(element);
+  }
+
+  return -1;
 }
 
 export default helper(arrayLastIndexOf);

@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object[]} The filtered array.
  */
 export function arrayFilter([array, fn]) {
-  return array.filter(fn);
+  if (Array.isArray(array)) {
+    return array.filter(fn);
+  }
+
+  return [];
 }
 
 export default helper(arrayFilter);

@@ -21,4 +21,12 @@ module('Integration | Helper | array-includes', function(hooks) {
     await render(hbs`{{array-includes array 'z'}}`);
     assert.equal(this.element.textContent.trim(), 'false');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray = 'a';
+    this.set('array', nonArray);
+
+    await render(hbs`{{array-includes array 'a'}}`);
+    assert.equal(this.element.textContent.trim(), 'false');
+  });
 });

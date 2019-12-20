@@ -13,4 +13,12 @@ module('Integration | Helper | array-join', function(hooks) {
     await render(hbs`{{array-join array '-'}}`);
     assert.equal(this.element.textContent.trim(), 'a-b-c-d-e');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray = 'a';
+    this.set('array', nonArray);
+
+    await render(hbs`{{array-join array '-'}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

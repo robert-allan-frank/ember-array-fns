@@ -15,4 +15,14 @@ module('Integration | Helper | array-reverse', function(hooks) {
     await render(hbs`{{array-sort array fn}}`);
     assert.equal(this.element.textContent.trim(), '1,2,3,4,5');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const fn = (left, right) => left - right;
+    const nonArray = 'a';
+    this.set('array', nonArray);
+    this.set('fn', fn);
+
+    await render(hbs`{{array-sort array fn}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

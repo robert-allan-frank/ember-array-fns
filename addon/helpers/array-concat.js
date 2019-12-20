@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  */
 export function arrayConcat([...arrays]) {
   return arrays.reduce((accumulator, array) => {
-    return accumulator.concat(array);
+    if (Array.isArray(array)) {
+      return accumulator.concat(array);
+    } else {
+      return accumulator;
+    }
   }, []);
 }
 

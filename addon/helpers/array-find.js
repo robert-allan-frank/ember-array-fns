@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object} The found element else undefined.
  */
 export function arrayFind([array, fn]) {
-  return array.find(fn);
+  if (Array.isArray(array)) {
+    return array.find(fn);
+  }
+
+  return undefined;
 }
 
 export default helper(arrayFind);

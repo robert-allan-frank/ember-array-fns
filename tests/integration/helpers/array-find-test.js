@@ -25,4 +25,14 @@ module('Integration | Helper | array-find', function(hooks) {
     await render(hbs`{{array-find array fn}}`);
     assert.equal(this.element.textContent.trim(), '');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const fn = item => item === 'a';
+    const nonArray = 'a';
+    this.set('array', nonArray);
+    this.set('fn', fn);
+
+    await render(hbs`{{array-find array fn}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });
