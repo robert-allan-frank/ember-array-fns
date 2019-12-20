@@ -25,4 +25,14 @@ module('Integration | Helper | array-some', function(hooks) {
     await render(hbs`{{array-some array fn}}`);
     assert.equal(this.element.textContent.trim(), 'false');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const fn = item => item === 'a';
+    const array = 'a';
+    this.set('array', array);
+    this.set('fn', fn);
+
+    await render(hbs`{{array-some array fn}}`);
+    assert.equal(this.element.textContent.trim(), 'false');
+  });
 });

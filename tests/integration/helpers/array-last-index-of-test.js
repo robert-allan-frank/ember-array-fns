@@ -21,4 +21,12 @@ module('Integration | Helper | array-last-index-of', function(hooks) {
     await render(hbs`{{array-last-index-of array 'z'}}`);
     assert.equal(this.element.textContent.trim(), -1);
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray = 'a';
+    this.set('array', nonArray);
+
+    await render(hbs`{{array-last-index-of array 'a'}}`);
+    assert.equal(this.element.textContent.trim(), '-1');
+  });
 });

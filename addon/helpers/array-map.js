@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object[]} The new array of mapped elements.
  */
 export function arrayMap([array, fn]) {
-  return array.map(fn);
+  if (Array.isArray(array)) {
+    return array.map(fn);
+  }
+
+  return [];
 }
 
 export default helper(arrayMap);

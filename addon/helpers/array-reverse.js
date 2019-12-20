@@ -9,7 +9,11 @@ import { helper } from '@ember/component/helper';
  * @returns {Object[]} The reversed array.
  */
 export function arrayReverse([array]) {
-  return array.reverse();
+  if (Array.isArray(array)) {
+    return array.reverse();
+  }
+
+  return [];
 }
 
 export default helper(arrayReverse);

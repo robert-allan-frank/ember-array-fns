@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {number} Zero based index of the found element else -1.
  */
 export function arrayFindIndex([array, fn]) {
-  return array.findIndex(fn);
+  if (Array.isArray(array)) {
+    return array.findIndex(fn);
+  }
+
+  return -1;
 }
 
 export default helper(arrayFindIndex);

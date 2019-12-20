@@ -18,4 +18,14 @@ module('Integration | Helper | array-concat', function(hooks) {
     await render(hbs`{{array-concat array1 array2 array3}}`);
     assert.equal(this.element.textContent.trim(), 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o');
   });
+
+  test('can fail gracefully with non-array', async function(assert) {
+    const nonArray1 = 'a';
+    const nonArray2 = 'a';
+    this.set('array1', nonArray1);
+    this.set('array2', nonArray2);
+
+    await render(hbs`{{array-concat array1 array2}}`);
+    assert.equal(this.element.textContent.trim(), '');
+  });
 });

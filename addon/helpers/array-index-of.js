@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {number} Zero based index of first item if found else -1.
  */
 export function arrayIndexOf([array, element]) {
-  return array.indexOf(element);
+  if (Array.isArray(array)) {
+    return array.indexOf(element);
+  }
+
+  return -1;
 }
 
 export default helper(arrayIndexOf);

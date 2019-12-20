@@ -10,7 +10,11 @@ import { helper } from '@ember/component/helper';
  * @returns {boolean} True if at least one match is found.
  */
 export function arraySome([array, fn]) {
-  return array.some(fn);
+  if (Array.isArray(array)) {
+    return array.some(fn);
+  }
+
+  return false;
 }
 
 export default helper(arraySome);
