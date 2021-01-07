@@ -20,6 +20,7 @@ Usage
 * [`array-find-index`](#array-find-index)
 * [`array-includes`](#array-includes)
 * [`array-index-of`](#array-index-of)
+* [`array-is-array`](#array-is-array)
 * [`array-is-first-element`](#array-is-first-element)
 * [`array-is-last-element`](#array-is-last-element)
 * [`array-join`](#array-join)
