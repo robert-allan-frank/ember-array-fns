@@ -33,6 +33,14 @@ Usage
 * [`array-sort`](#array-sort)
 * [`array-splice`](#array-splice)
 
+## Glint types
+To enable Glint template typechecking for the addon, add:
+```js
+import 'ember-array-fns/glint';
+```
+anywhere you put your app's global types into, e.g. `types/global.d.ts`.
+See also [Glint documentation](https://typed-ember.gitbook.io/glint/using-glint/ember/using-addons)
+
 #### `array-concat`
 Perform concatenation of two or more arrays. See [Array.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) for details on the Array.concat function.
 
