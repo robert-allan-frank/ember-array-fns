@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "glint": "node node_modules/@glint/core/bin/glint.js",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
@@ -25,6 +26,8 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
+    "@glint/core": "^0.9.7",
+    "@glint/environment-ember-loose": "^0.9.7",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.28.6",
     "ember-cli-addon-docs": "^0.6.14",
