@@ -1,6 +1,6 @@
 {
   "name": "ember-array-fns",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "This addon provides array helpers for Ember templates and components.",
   "keywords": [
     "ember-addon"
